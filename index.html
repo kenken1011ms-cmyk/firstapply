@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アンケートアプリ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>アンケート</h1>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <p class="question-number" id="questionNumber">質問 1 / 4</p>
+        </header>
+
+        <main>
+            <!-- 質問画面 -->
+            <div id="quizArea" class="quiz-area">
+                <h2 id="questionText" class="question-text">質問文がここに表示されます</h2>
+                <div id="optionsArea" class="options-area">
+                    <!-- ボタンはJavaScriptで生成 -->
+                </div>
+            </div>
+
+            <!-- 結果画面 -->
+            <div id="resultArea" class="result-area hidden">
+                <h2>アンケート完了</h2>
+                <p class="result-message">ご協力ありがとうございました！</p>
+                <div id="resultList" class="result-list">
+                    <!-- 結果はJavaScriptで生成 -->
+                </div>
+                <button id="restartBtn" class="btn-restart">もう一度回答する</button>
+            </div>
+        </main>
+
+        <footer class="nav-buttons">
+            <button id="prevBtn" class="btn-nav" disabled>戻る</button>
+            <button id="nextBtn" class="btn-nav" disabled>次へ</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
